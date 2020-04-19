@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaFX_Face.jnlp">
+  <information>
+    <title>JavaFX_Face</title>
+    <vendor>Voyager</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" java-vm-args="-Djava.library.path="D:\Installed\OpenCV\OpenCV_3.4.1\opencv\build\java\x64";"D:\Installed\OpenCV\OpenCV_3.4.1\opencv\build\x64\vc15\bin";"D:\Projects\NetBeansProjects\JavaFX_Face\lib\opencv_java310" "  href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JavaFX_Face.jar" size="47971369" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\jfoenix-8.0.1.jar" size="2405715" download="eager" />
+    <jar href="lib\opencv-310.jar" size="324300" download="eager" />
+    <jar href="lib\opencv-341.jar" size="423917" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="JavaFX_Face" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="javafx_face.JavaFX_Face"  name="JavaFX_Face" />
+  <update check="always"/>
+</jnlp>

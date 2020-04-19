@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anrpane_main" prefHeight="517.0" prefWidth="1120.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_face.FXMLMainController"> 
+   <children>
+      <AnchorPane fx:id="anrpane_menu" prefHeight="517.0" prefWidth="200.0" style="-fx-background-color: #2D3447;">
+         <children>
+            <Pane prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #2196F3;">
+               <children>
+                  <Label layoutX="76.0" layoutY="12.0" text="Menu" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <MenuButton fx:id="menubtn_config" layoutX="16.0" layoutY="85.0" mnemonicParsing="false" popupSide="RIGHT" prefWidth="128.0" style="-fx-background-color: #2196F3;" text="Configure Camera" textFill="WHITE">
+              <items>
+                <MenuItem fx:id="menu1_Item1" mnemonicParsing="false" text="WebCam" />
+                <MenuItem fx:id="menu1_Item2" mnemonicParsing="false" text=" IP Camera" />
+                  <MenuItem fx:id="menu1_Item3" mnemonicParsing="false" text="USB Camera" />
+              </items>
+            </MenuButton>
+            <Label fx:id="lable_config" layoutX="30.0" layoutY="122.0" prefHeight="17.0" prefWidth="115.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_add" layoutX="16.0" layoutY="191.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #2196F3;" text="Add Face" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn_del" layoutX="17.0" layoutY="269.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #2196F3;" text="Delete Face" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="22.0" layoutY="347.0" text="Detection" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXToggleButton fx:id="toggle_detect" layoutX="102.0" layoutY="327.0" prefHeight="58.0" prefWidth="96.0" text="OFF" textFill="#78ddeb" toggleColor="#2196f3" toggleLineColor="#7ac4fc" />
+            <Label layoutX="22.0" layoutY="409.0" text="Recognization" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXToggleButton fx:id="toggle_reco" layoutX="102.0" layoutY="389.0" prefHeight="58.0" prefWidth="96.0" text="OFF" textFill="#78ebe9" toggleColor="#2196f3" toggleLineColor="#7ac4fc" />
+            <JFXTextField fx:id="textField_IP" focusColor="#2196f3" layoutX="14.0" layoutY="146.0" prefHeight="25.0" prefWidth="181.0" promptText="Enter IP Address" style="-fx-background-color: #ffffff;" text="http://192.168.0.2:4747/video" unFocusColor="WHITE" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anrpane_display" layoutX="206.0" prefHeight="517.0" prefWidth="664.0" style="-fx-background-color: #2196F3 #2196F3;">
+         <children>
+            <Pane prefHeight="40.0" prefWidth="664.0" style="-fx-background-color: #2D3447;">
+               <children>
+                  <Label layoutX="311.0" layoutY="13.0" text="Display" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView disable="true" fitHeight="20.0" fitWidth="24.0" layoutX="577.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/minimize.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView disable="true" fitHeight="20.0" fitWidth="24.0" layoutX="609.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/maximize.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView disable="true" fitHeight="20.0" fitWidth="24.0" layoutX="637.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/close.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btn_min1" layoutX="575.0" layoutY="6.0" onMouseClicked="#handleButtonAction" text=" " textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_max1" layoutX="607.0" layoutY="5.0" onMouseClicked="#handleButtonAction" text=" " textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_close1" layoutX="635.0" layoutY="6.0" onMouseClicked="#handleButtonAction" text=" " textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane layoutX="4.0" layoutY="45.0" prefHeight="467.0" prefWidth="655.0" style="-fx-background-color: #2D3447;">
+               <children>
+                  <ImageView fx:id="disp_imageview1" fitHeight="467.0" fitWidth="656.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../resources/Images/display.png" />
+                     </image></ImageView>
+                  <MediaView fx:id="disp_mediaview1" accessibleRole="BUTTON" fitHeight="467.0" fitWidth="656.0" onMouseClicked="#handleButtonAction" preserveRatio="false" />
+                  <JFXProgressBar fx:id="disp_progressbar1" layoutX="245.0" layoutY="453.0" visible="false" />
+                  <ImageView disable="true" fitHeight="20.0" fitWidth="24.0" layoutX="621.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/pause.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btn_mediaPause1" layoutX="620.0" layoutY="434.0" text=" " />
+                  <ImageView disable="true" fitHeight="20.0" fitWidth="24.0" layoutX="592.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/play.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btn_mediaPlay1" layoutX="592.0" layoutY="434.0" text=" " />
+                  <JFXButton fx:id="btn_start" layoutX="179.0" layoutY="422.0" style="-fx-background-color: #2196F3;" text="Start" textFill="WHITE" />
+               
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anrpane_list" layoutX="876.0" prefHeight="517.0" prefWidth="163.0" style="-fx-background-color: #2D3447;">
+         <children>
+            <Pane prefHeight="40.0" prefWidth="164.0" style="-fx-background-color: #2196F3;">
+               <children>
+                  <Label layoutX="77.0" layoutY="12.0" text="List" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="5.0" layoutY="61.0" prefHeight="17.0" prefWidth="152.0" text="Faces Recognized" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextArea fx:id="list_recoface" editable="false" layoutX="5.0" layoutY="85.0" prefHeight="425.0" prefWidth="152.0" style="-fx-text-inner-color: #ffffff; -fx-background-color: #525a6e;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextArea>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anrpane_details" layoutX="877.0" prefHeight="517.0" prefWidth="245.0" style="-fx-background-color: #2D3447;">
+         <children>
+            <Pane prefHeight="40.0" prefWidth="245.0" style="-fx-background-color: #2196F3;">
+               <children>
+                  <Label layoutX="78.0" layoutY="12.0" text="Person's Details" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="6.0" layoutY="52.0" prefHeight="17.0" prefWidth="231.0" text="Please fill in the details for the" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="131.0" prefHeight="17.0" prefWidth="41.0" text="Name :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_save" layoutX="58.0" layoutY="403.0" style="-fx-background-color: #2196F3;" text="Save" textFill="WHITE" />
+            <JFXButton fx:id="btn_apply" layoutX="139.0" layoutY="403.0" style="-fx-background-color: #2196F3;" text="Apply" textFill="WHITE" />
+            <Label layoutX="16.0" layoutY="200.0" text="Age :" textFill="WHITE" />
+            <Label layoutX="14.0" layoutY="263.0" text="Gender :" textFill="WHITE" />
+            <Label layoutX="10.0" layoutY="323.0" text="Nationality :" textFill="WHITE" />
+            <JFXTextField fx:id="newUserName" layoutX="94.0" layoutY="127.0" onAction="#anu" onInputMethodTextChanged="#anu" onKeyPressed="#anu" onKeyReleased="#anu" onKeyTyped="#anu" style="-fx-background-color: #ffffff;" />
+            <JFXTextField layoutX="93.0" layoutY="196.0" style="-fx-background-color: #ffffff;" />
+            <JFXTextField layoutX="93.0" layoutY="259.0" style="-fx-background-color: #ffffff;" />
+            <JFXTextField layoutX="94.0" layoutY="319.0" style="-fx-background-color: #ffffff;" />
+            <Label layoutX="8.0" layoutY="69.0" prefHeight="17.0" prefWidth="231.0" text="face recognised." textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

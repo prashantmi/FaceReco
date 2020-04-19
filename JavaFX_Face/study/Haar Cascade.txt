@@ -1,0 +1,8 @@
+A Haar Cascade is basically a classifier which is used to detect the object for which it has been trained for, from the source.
+
+The Haar Cascade is by superimposing the positive image over a set of negative images. The training is generally done on a server and on various stages. Better results are obtained by using high quality images and increasing the amount of stages for which the classifier is trained. One can also used predefined Haar Cascades which are available on Github.
+
+If you want to know about making your own Haar Cascade, refer to my answer here.
+
+
+
